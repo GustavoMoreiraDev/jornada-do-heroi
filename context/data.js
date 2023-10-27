@@ -7,6 +7,8 @@ const DataProv = ({ children }) => {
 
     const [ loading, setLoading] = useState(true);
     const [ info, setInfo ] = useState([]);
+    const [ nav, setNav ] = useState(5);
+    const [ perPage, setPerPage ] = useState(15);
 
     useEffect(() => {
         const Dados = async ()  => {
@@ -22,8 +24,12 @@ const DataProv = ({ children }) => {
         Dados();
     },[]);
 
+    const indexOfLastElement = nav * perPage;
+    const indexOfFirstElement = indexOfLastElement - perPage;
+    const currentElements = info.slice(indexOfFirstElement, indexOfLastElement);
+
     return (
-        <DataContext.Provider value={{ info, loading}}>
+        <DataContext.Provider value={{ info: currentElements, loading, nav, setNav }}>
             {children}
         </DataContext.Provider>
     )
