@@ -1,0 +1,17 @@
+.c-container {
+    width: 100%;
+    display: flex;
+    gap: 30px 20px;
+    flex-wrap: wrap;
+    margin: 40px auto;
+    max-width: 1050px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+    .c-container {
+        justify-content: center;
+        padding: 0 2%;
+    }
+}
