@@ -1,10 +1,90 @@
 .b-container {
     width: 100%;
-    height: 420px;
-    background-color: red;
+    display: flex;
+    height: 450px;
+    position: relative;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: rgb(128, 11, 11);
 }
 
+.b-alert {
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.b-content {
+    justify-content: space-between;
+    position: absolute;
+    max-width: 850px;
+    display: flex;
+    width: 100%;
+    top: 120px;
+}
+.b-back-btn {
+    position: absolute;
+    color: #ffffff;
+    font-size: 25px;
+    left: -150px;
+    top: -50px;
+}
+.b-info {
+    color: #ffffff;
+}
+.b-info h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 30px;    
+}
+.b-info h5 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+}
+
+.b-info-p {
+    padding: 20px 20px 0 0;
+    flex-direction: column;
+    text-align: justify;
+    margin-bottom: 20px;
+    font-size: 12px;
+    display: flex;
+    gap: 20px;
+}
+.b-hab {
+    gap: 20px;
+    width: 100%;
+    display: flex;
+    padding: 10px 0;
+}
+
+.b-habilidade {
+    gap: 5px;
+    display: flex;
+    cursor: default;
+    align-items: center;
+}
+
+.b-habilidade p {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.b-hab-icon {
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    color: #000;
+    border-radius: 5px;
+}
 .b-image {
-    width: 450px;
+    width: 350px;
     height: auto;
+    object-fit: cover;
+    border-radius: 10px;
 }

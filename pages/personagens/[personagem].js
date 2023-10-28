@@ -1,18 +1,18 @@
-import Head from "next/head"
-import { UseData } from "@/context/data"
+import Head from "next/head";
+import { UsePerson } from "@/context/personagens";
 
 import Banner from "@/components/personagem/banner";
 
-export default function Personagem () {
+export default function Personagem() {
+  
+  const { person } = UsePerson();
 
-    const { info } = UseData();
-
-    return (
-        <>
-            <Head>
-                <title>Personagem</title>
-            </Head>
-            <Banner />
-        </>
-    )
-};
+  return (
+    <>
+        <Head>
+          <title>Jonada do Heroi | {person[0]?.name || 'Não encontrado!!'}</title>
+        </Head>
+        <Banner />
+    </>
+  );
+}

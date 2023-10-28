@@ -11,11 +11,10 @@ export default function PersonagensPage() {
         <title>Jornada do Heroi | Personagens</title>
       </Head>
       <Header />
-      <Navigation />
       <Column>
         <Card />
       </Column>
       <Navigation />
     </>
   );
-};
+}

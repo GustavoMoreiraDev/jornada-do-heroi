@@ -7,7 +7,7 @@ const DataProv = ({ children }) => {
 
     const [ loading, setLoading] = useState(true);
     const [ info, setInfo ] = useState([]);
-    const [ nav, setNav ] = useState(5);
+    const [ nav, setNav ] = useState(1);
     const [ perPage, setPerPage ] = useState(15);
 
     useEffect(() => {
