@@ -19,7 +19,9 @@ const Card = () => {
         <>
             {info.map((i) => (
                 <section key={i.id} className={style['c-container']}>
-                    <Image className={style['c-img']} src={i.images.sm} width={180} height={270} loading={'lazy'} alt={i.name} />
+                    <button style={{width:'100%'}} onClick={() => pers(i)}>
+                        <Image className={style['c-img']} src={i.images.sm} width={180} height={270} loading={'lazy'} alt={i.name} />
+                    </button>                    
                     <button onClick={() => pers(i)} className={style['c-btn-page']} ><BsBoxArrowUpRight /></button>                    
                     <h4>{i.name}</h4>
                     <div className={style['c-info']}>

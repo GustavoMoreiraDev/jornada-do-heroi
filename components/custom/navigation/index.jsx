@@ -11,8 +11,8 @@ const Navigation = () => {
             <div className={style['n-container']}>
                 <Btn conteudo={'1'} on={() => { if (nav > 1) {setNav(1) }}}  dis={nav === 1} />
                 <Btn conteudo={'<'} on={() => { if (nav > 1) {setNav(nav - 1)}}}  dis={nav === 1} />
-                <Btn conteudo={'>'} on={() => { if (nav < 38) {setNav(nav + 1)}}} />
-                <Btn conteudo={'38'} on={() => { if (nav < 38) {setNav(38)}}} />
+                <Btn conteudo={'>'} on={() => { if (nav < 57) {setNav(nav + 1)}}} />
+                <Btn conteudo={'57'} on={() => { if (nav < 57) {setNav(57)}}} />
             </div>
         </>
     );

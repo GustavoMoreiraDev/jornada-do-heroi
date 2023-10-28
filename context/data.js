@@ -8,7 +8,7 @@ const DataProv = ({ children }) => {
     const [ loading, setLoading] = useState(true);
     const [ info, setInfo ] = useState([]);
     const [ nav, setNav ] = useState(1);
-    const [ perPage, setPerPage ] = useState(15);
+    const [ perPage, setPerPage ] = useState(10);
 
     useEffect(() => {
         const Dados = async ()  => {
@@ -28,7 +28,7 @@ const DataProv = ({ children }) => {
     const currentElements = info.slice(indexOfFirstElement, indexOfLastElement);
 
     return (
-        <DataContext.Provider value={{ info: currentElements, loading, nav, setNav }}>
+        <DataContext.Provider value={{ info: currentElements, loading, nav, setNav, setPerPage }}>
             {children}
         </DataContext.Provider>
     )
