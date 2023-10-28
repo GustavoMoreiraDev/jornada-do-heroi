@@ -58,6 +58,7 @@
     position: absolute;
     color: #ffffff;
     padding: 20px;
+    width: 100%;
     text-align: left;
     z-index: 5;
     top: 120px;
@@ -87,14 +88,23 @@
         gap: 20px;
     }
     .s-input {
-        width: 100%;
-        outline: none;
-        max-width: 850px;
-        color: #ffffffd7;
-        text-align: center;
-        padding: 10px 25px;
         border-radius: 0;
-        border: solid 2px #000;
-        background-color: #00000056;
     }
+}
+
+@media screen and (max-width: 505px) {
+    .s-results {
+        gap: 5px;
+    }
+    .s-card {
+        max-width: 30%;
+    }
+    .s-card-info {
+        position: absolute;
+        color: #ffffff;
+        padding: 5px;
+    }
+    .s-card-info h5 {
+        font-size: 16px;
+    }    
 }
