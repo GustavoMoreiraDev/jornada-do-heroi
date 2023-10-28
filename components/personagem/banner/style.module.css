@@ -88,3 +88,21 @@
     object-fit: cover;
     border-radius: 10px;
 }
+
+@media screen and (max-width: 1232px) {
+    .b-back-btn {
+        left: -90px;
+    }
+}
+@media screen and (max-width: 1060px) {
+    .b-content {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 20px 4%;
+        gap: 40px;
+    }
+    .b-back-btn {
+        padding: 0 4%;
+        left: 0;
+    }
+}
