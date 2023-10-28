@@ -44,3 +44,12 @@
     display: flex;
     align-items: center;
 }
+
+@media screen and (max-width: 392px) {
+    .c-container {
+        max-width: 350px;
+    }
+    .c-img {
+        height: 320px;
+    }
+}

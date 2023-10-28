@@ -12,6 +12,12 @@
 
 @media screen and (max-width: 768px) {
     .c-container {
-        padding: 0 2%;
+        padding: 50px 1% 0 1%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .c-container {
+        gap: 30px 10px;
     }
 }
