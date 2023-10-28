@@ -1,0 +1,21 @@
+.o-container {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    min-height: 250px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+.c-img-wrap {
+    width: 50px;
+    height: 50px;
+}
+.c-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
