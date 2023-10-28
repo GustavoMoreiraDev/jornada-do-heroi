@@ -12,9 +12,8 @@ const DataProv = ({ children }) => {
 
     useEffect(() => {
         const Dados = async ()  => {
-            const baseUrl = "http://homologacao3.azapfy.com.br/api/ps/metahumans";
             try {
-              const response = await axios.get(baseUrl);
+              const response = await axios.get("/api");
               setInfo(response.data);
               setLoading(false);  
             } catch (error) {
