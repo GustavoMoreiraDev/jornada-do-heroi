@@ -1,26 +1,49 @@
 .a-container {
+    gap: 5px;
     width: 100%;
     display: flex;
     margin: 0 auto;
-    padding: 30px 0;
+    padding: 30px 2%;
     max-width: 1050px;
+    position: relative;
     align-items: center;
     justify-content: space-evenly;
 }
 
+.a-result {
+    width: 100%;
+    display: flex;
+    max-width: 300px;
+    align-items: center;
+    flex-direction: column;
+}
 .a-result h1 {
     font-size: 45px;
     color: #ffffff;
     font-weight: bold;
     letter-spacing: 2px;
 }
+.a-result-btn-fight {
+    width: 100%;
+    bottom: 40px;
+    padding: 5px 0;
+    max-width: 150px;
+    color: #ffffff;
+    position: absolute;
+    background-color: green;
+}
 .a-card {
-    width: 250px;
+    width: 100%;
+    max-width: 250px;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
+.a-card-icon {
+    color: #ffffff80;
+    font-size:150px;
+}
 .a-card-img {
     width: 250px;
     height: auto;
@@ -32,4 +55,10 @@
     font-weight: 600;
     padding: 10px 0;
     letter-spacing: 2px;
+}
+
+@media screen and (max-width: 540px) {
+    .a-card h4 {
+        font-size: 16px;
+    }
 }

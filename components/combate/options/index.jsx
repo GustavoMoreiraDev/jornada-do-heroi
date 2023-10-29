@@ -10,11 +10,6 @@ const Options = () => {
     const personagens = (i) => {
         if (lutadores.length < 2) {
             setLutadores([...lutadores, i]);
-        } else if (lutadores.length === 2) {
-            const newLutadores = [...lutadores];
-            newLutadores[0] = i;
-            newLutadores[1] = lutadores[1] ? lutadores[1] : null;
-            setLutadores(newLutadores);
         }
     };
 
