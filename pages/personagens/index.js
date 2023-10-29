@@ -9,7 +9,7 @@ import Search from "@/components/custom/search";
 import Loading from "@/components/custom/loading";
 export default function PersonagensPage() {
 
-  const { loading } = UseData();
+  const { loading, nav, setNav } = UseData();
 
   if (loading) { return <Loading />};
   
@@ -23,7 +23,7 @@ export default function PersonagensPage() {
       <Column>
         <Card />
       </Column>
-      <Navigation />
+      <Navigation nav={nav} setNav={setNav} max={57} />
     </>
   );
 }

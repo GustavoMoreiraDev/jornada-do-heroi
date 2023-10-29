@@ -23,9 +23,9 @@ const DataProv = ({ children }) => {
         Dados();
     },[]);
 
-    const indexOfLastElement = nav * perPage;
-    const indexOfFirstElement = indexOfLastElement - perPage;
-    const currentElements = info.slice(indexOfFirstElement, indexOfLastElement);
+    const end = nav * perPage;
+    const start = end - perPage;
+    const currentElements = info.slice( start, end);
 
     return (
         <DataContext.Provider value={{ info: currentElements, loading, nav, setNav, setPerPage }}>

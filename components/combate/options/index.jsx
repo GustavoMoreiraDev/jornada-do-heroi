@@ -16,7 +16,7 @@ const Options = () => {
     return (
         <>
             <div className={style['o-container']}>
-                {info.slice(0, 150).map((i) => (
+                {info.map((i) => (
                     <button onClick={() => personagens(i)} className={style['c-img-wrap']} key={i.id}>
                         <Image className={style['c-img']} src={i.images.sm} width={50} height={50} alt={'jdh'} />
                     </button>

@@ -3,7 +3,7 @@
     width: 100%;
     display: flex;
     margin: 0 auto;
-    padding: 30px 2%;
+    padding: 30px 4%;
     max-width: 1050px;
     position: relative;
     align-items: center;
@@ -58,7 +58,17 @@
 }
 
 @media screen and (max-width: 540px) {
+    .a-card-icon {
+        font-size:70px;
+    }
     .a-card h4 {
         font-size: 16px;
+    }
+    .a-result h1 {
+        font-size: 25px;
+    }
+    .a-result-btn-fight {
+        font-size: 10px;
+        max-width: 100px;
     }
 }

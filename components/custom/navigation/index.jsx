@@ -1,18 +1,15 @@
 import React from 'react';
 import style from './style.module.css';
-import { UseData } from '@/context/data';
 
-const Navigation = () => {
-
-    const { nav, setNav } = UseData();
+const Navigation = ({ nav, setNav, max }) => {
 
     return (
         <>
             <div className={style['n-container']}>
                 <Btn conteudo={'1'} on={() => { if (nav > 1) {setNav(1) }}}  dis={nav === 1} />
                 <Btn conteudo={'<'} on={() => { if (nav > 1) {setNav(nav - 1)}}}  dis={nav === 1} />
-                <Btn conteudo={'>'} on={() => { if (nav < 57) {setNav(nav + 1)}}} />
-                <Btn conteudo={'57'} on={() => { if (nav < 57) {setNav(57)}}} />
+                <Btn conteudo={'>'} on={() => { if (nav < max) {setNav(nav + 1)}}} />
+                <Btn conteudo={`${max}`} on={() => { if (nav < max) {setNav(max)}}} />
             </div>
         </>
     );

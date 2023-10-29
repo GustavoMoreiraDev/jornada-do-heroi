@@ -8,7 +8,9 @@ const CombateProv = ({ children }) => {
     const [ info, setInfo ] = useState([]);
     const [ loading, setLoading ] = useState(true);
     const [ lutadores, setLutadores ] = useState([]);
+    const [ perPage, setPerPage ] = useState(150);
     const [ modal, setModal ] = useState(false);
+    const [ nav, setNav ] = useState(1);
 
     useEffect(() => {
         const Personagens = async () => {
@@ -23,8 +25,12 @@ const CombateProv = ({ children }) => {
         Personagens();
     },[]);
 
+    const end = nav * perPage;
+    const start = end - perPage;
+    const currentElements = info.slice( start, end);
+
     return (
-        <CombateContext.Provider value={{ info, loading, lutadores, setLutadores, modal, setModal }}>
+        <CombateContext.Provider value={{ info: currentElements, loading, lutadores, setLutadores, modal, setModal, nav, setNav }}>
             {children}
         </CombateContext.Provider>
     );
